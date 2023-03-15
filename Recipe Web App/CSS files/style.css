@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Dancing+Script:wght@500&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orangered: orangered;
+    --orange: orange;
+    --red: red;
+    --text-color: #333;
+    --white: white;
+    --bg-color: whitesmoke;
+    --light-salmon: lightsalmon;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+}
+
+/* re usable code  */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+img {
+    border-radius: 5px;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* re usable code ends here  */
+
+
+.swiper {
+    height: 80vh !important;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.slider img {
+    width: 100%;
+    height: 100vh;
+    animation: moveImg 7s linear infinite;
+    margin-top: 20px;
+}
+
+@keyframes moveImg {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.slider .content {
+    position: absolute;
+    top: 30%;
+    color: var(--white);
+    text-align: center;
+}
+
+.slider .content h2 {
+    font-size: 3.5vw;
+    font-weight: bolder;
+}
+
+.slider .content p {
+    font-size: 2vw;
+    font-weight: 900;
+}
+
+/* page layout ends here  */
+/* recipe by category css  */
+.card-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.card-section img {
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.card-section img:hover {
+    transform: scale(1.1);
+}
+
+.card-section .card-content {
+    position: absolute;
+    top: 85%;
+
+}
+
+.card-section .card-content h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--white);
+}
+
+/* recipe by category css ends here  */
+/* popular recipe section css starts here  */
+
+.card img {
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.popular-card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+/* popular recipe section ends here  */
+/* our special recipe section starts here  */
+.special-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: content-box;
+    min-height: 100vh;
+    background-color: blanchedalmond;
+}
+
+.special-recipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.special-recipe h2 {
+    color: var(--text-color);
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.special-recipe p {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.special-recipe .special-product img {
+    height: 50vh;
+    transition: all 0.5s ease;
+}
+
+.special-recipe .special-product img:hover {
+    transform: scale(1.1);
+}
+
+.special-recipe .special-product h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--red);
+    margin-top: 10px;
+}
+
+.special-recipe .special-product h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+.special-recipe .special-product p {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.special-recipe .special-product .product-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+i {
+    color: var(--red);
+}
+
+/* our special recipe section ends here  */
+/* pop up section css starts here  */
+.pop-up {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pop-up img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.pop-up .popup-content {
+    position: absolute;
+    top: 50%;
+    font-size: 100px;
+    cursor: pointer;
+    text-align: center;
+}
+.pop-up .popup-content h2{
+    font-size: 22px;
+    font-weight: bolder;
+    color: var(--white);
+}
+.popup-message {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 1%;
+    animation: moveMsg 1s ease;
+    z-index: 9999;
+}
+@keyframes moveMsg {
+    0%{
+        transform: translateY(-5%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.popup-message.active{
+    display: none;
+}
+
+.popup-message .pop-icon i {
+    position: fixed;
+    right: 5%;
+    top: 10%;
+    font-size: 30px;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.background {
+    filter: blur(5px) brightness(0.7);
+}
+/* pop up css section ends here  */
+/* tab section css starts here  */
+.tabs{
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    
+}
+.button{
+   padding: 10px;
+   background-color: var(--red);
+   font-size: 16px;
+   color: var(--text-color);
+   font-weight: 600;
+   border: none;
+   border-radius: 5px;
+   transition: all .3s linear;
+}
+.btn-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh;
+    width: 20%;
+    background-color: var(--white);
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+}
+.button:hover:not(.live){
+    background-color: coral;
+    color: white;
+}
+.tab-content{
+    background-color: azure;
+    position: relative;
+    width: 80%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+    height: 50vh;
+    overflow: hidden;
+}
+.tabs .tab-content .content{
+    padding-left: 10px;
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+}
+.tabs .tab-content .content img{
+    height: 40vh;
+    width: 30%;
+}
+.tabs .tab-content .content .ingredient h2{
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--text-color);
+}
+.tabs .tab-content .content .ingredient p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.tabs .tab-content .content .ingredient h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.tabs .tab-content .content .ingredient ol li{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.tabs .tab-content .content.live{
+    display: none;
+}
+.button.live{
+    background-color: #ffe5e2;
+}
+/* tab section css ends here  */
+
+@media screen and (max-width:992px) {
+    .slider .content h2 {
+        font-size: 20px;
+    }
+
+    .slider .content p {
+        font-size: 14px;
+    }
+
+    .card-section {
+        margin-top: 20px;
+    }
+
+    .card-section .card-content h2 {
+        font-size: 20px;
+    }
+
+    .popular-card {
+        margin-top: 20px;
+    }
+
+    .special-recipe .special-section {
+        padding-top: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .pop-up .popup-content{
+        font-size: 50px;
+    }
+    .pop-up .popup-content h2{
+        font-size: 15px;
+    }
+    .tabs{
+        flex-direction: column;
+    }
+    .tabs .btn-container{
+        flex-direction: row;
+        /* gap: 20px; */
+        justify-content: space-around;
+        width: 100%;
+        font-size: 12px;
+        min-height: 0;
+    }
+    .tabs .btn-container .button{
+        font-size: 1.2vw;
+        padding: 5px;
+        display: inline-block;
+    }
+    .tab-content{
+        width: 100%;
+        min-height: 100vh;
+    }
+    .content{
+        flex-wrap: wrap ;
+    }
+    .tabs .tab-content .content img{
+        width: 50%;
+    }
+    .tabs .tab-content .content .ingredient h3{
+        font-size: 14px;
+    }
+    .tabs .tab-content .content .ingredient h2{
+        font-size: 16px;
+    }
+    .tabs .tab-content .content .ingredient p{
+        font-size: 12px;
+    }
+}
+.footer{
+    display: none !important;
+}

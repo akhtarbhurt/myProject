@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Dancing+Script:wght@500&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orangered: orangered;
+    --orange: orange;
+    --red: red;
+    --text-color: #333;
+    --white: white;
+    --bg-color: whitesmoke;
+    --light-salmon: lightsalmon;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+}
+
+/* re usable code  */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+img {
+    border-radius: 5px;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--text-color);
+    text-align: center;
+}
+/* re usable code ends here  */
+
+.bg-img img{
+    width: 100%;
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    height: auto;
+}
+.about-content h2{
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+.about-content p{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+.about{
+    padding: 10px 10px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.about-card{
+    min-height: 40vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 1px solid lightslategray;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+}
+.about-card h2{
+    font-size: 25px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+.about-card div p{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+@media screen and (max-width:992px) {
+    .about-card{
+        margin-top: 10px;
+    }
+}

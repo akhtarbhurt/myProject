@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orangered: orangered;
+    --orange: orange;
+    --red: red;
+    --text-color: #333;
+    --white: white;
+    --bg-color: whitesmoke;
+    --light-salmon: lightsalmon;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+}
+/* re usable code  */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+img {
+    border-radius: 5px;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--text-color);
+    text-align: center;
+}
+/* re usable code ends here  */
+/* navigation css  */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.menu {
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--red);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--white);
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    display: none;
+    z-index: 999;
+}
+
+nav .logo {
+    min-height: 10vh;
+    height: 10vh;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 1.4vw;
+    margin-top: 10px;
+    position: relative;
+    font-weight: 800;
+}
+
+nav ul li a:hover {
+    color: var(--red);
+    transition: all 0.4s ease;
+}
+
+nav ul li:hover ::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: " ";
+    width: 50px;
+    height: 2px;
+    background-color: var(--red);
+    transition: all 0.3s ease;
+    animation: moveLine 0.3s ease;
+}
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+@keyframes moveLine {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 50px;
+    }
+
+}
+
+@media screen and (max-width:992px) {
+    .head {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        height: auto;
+        background-color: var(--white);
+        border: 2px solid lightgray;
+        box-shadow: 8px 12px 16px rgba(0, 0, 0, 0.3);
+        position: fixed;
+        right: 0;
+        z-index: 999;
+        top: 0;
+        width: 50%;
+        transform: translateX(100%);
+    }
+
+    .active {
+        transform: translateX(0);
+        animation: moveNav .5s linear;
+    }
+
+    @keyframes moveNav {
+        0% {
+            transform: translateX(100%);
+        }
+
+        50% {
+            transform: translateX(50%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    nav ul li {
+        font-size: 12px;
+    }
+
+    .menu {
+        display: block;
+    }
+}

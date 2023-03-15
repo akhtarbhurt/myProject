@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="CSS files/navbar.css">
+    <link rel="stylesheet" href="CSS files/recipe.css">
+    <title>Recipe Plan</title>
+</head>
+
+<body>
+    <header>
+        <i class="fa-solid menu fa-bars"></i>
+        <nav>
+            <img src="images/logo.png" class="logo" alt="">
+            <ul>
+                <li> <a href="index.html"> Home </a></li>
+                <li> <a href="about.html"> About Us </a></li>
+                <li> <a href="recipePlan.html"> Recipe Plan </a></li>
+                <li> <a href="registration.html"> Registration </a></li>
+                <li> <a href="contact.html"> Contact Us </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cover-page">
+        <div class="cover-content">
+            <h2>It is even better than <br>
+                an expensive cookery book
+            </h2>
+            <p>Learn how to make your favorite restaurant’s dishes
+            </p>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="input" placeholder="Enter Your Favorite item here" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="btn">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="heading">Ingredients</h2>
+                <div class="para">
+                    <!-- element is embeding here from javascript  -->
+                    <h2 class="mt-5 text-muted fs-5"> <span class=" select span">  <!-- element here is fetching from javascript --> </span> Search Your Recipe On Search Bar</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="image-container">
+                            <div class="img">
+                                <img src="images/recipe1.jpg" class="img-fluid" alt="">
+                                <h2>Turkish Baklava With Manchurian Sweet</h2>
+                            </div>
+                            <div class="img">
+                                <img src="images/recipe2.jpg" class="img-fluid" alt="">
+                                <h2>Turkish Baklava With Manchurian Sweet</h2>
+                            </div>
+                            <div class="img">
+                                <img src="images/recipe3.jpg" class="img-fluid" alt="">
+                                <h2>Turkish Baklava With Manchurian Sweet</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5 my-5">
+
+        <footer class="text-white text-center text-lg-start bg-dark">
+          <!-- Grid container -->
+          <div class="container p-4">
+            <!--Grid row-->
+            <div class="row mt-4">
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">About company</h5>
+      
+                <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                  voluptatum deleniti atque corrupti.
+                </p>
+      
+                <p>
+                  Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+                  molestias.
+                </p>
+      
+                <div class="mt-4">
+                  <!-- Facebook -->
+                  <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-facebook-f"></i></a>
+                  <!-- Dribbble -->
+                  <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-dribbble"></i></a>
+                  <!-- Twitter -->
+                  <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-twitter"></i></a>
+                  <!-- Google + -->
+                  <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-google-plus-g"></i></a>
+                  <!-- Linkedin -->
+                </div>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4 pb-1">Search something</h5>
+      
+                <div class="form-outline form-white mb-4">
+                  <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                  <label class="form-label" for="formControlLg">Search</label>
+                </div>
+      
+                <ul class="fa-ul" style="margin-left: 1.65em;">
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Warsaw, 00-967, Poland</span>
+                  </li>
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">contact@example.com</span>
+                  </li>
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 48 234 567 88</span>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">Opening hours</h5>
+      
+                <table class="table text-center text-white">
+                  <tbody class="fw-normal">
+                    <tr>
+                      <td>Mon - Thu:</td>
+                      <td>8am - 9pm</td>
+                    </tr>
+                    <tr>
+                      <td>Fri - Sat:</td>
+                      <td>8am - 1am</td>
+                    </tr>
+                    <tr>
+                      <td>Sunday:</td>
+                      <td>9am - 10pm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <!-- Grid container -->
+      
+          <!-- Copyright -->
+          <div class="text-center .footer p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:
+            <a class="text-white .footer" href="#">Akhtar Hameed</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+      
+      </div>
+
+      <script src="api.js"></script>
+      <script src="script.js"></script>
+</body>
+
+</html>
