@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Dictionary</title>
+</head>
+<body>
+    <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav class="active">
+            <a class="navbar-brand" href="#"><img src="Images/logo.png" class="logo" alt=""></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="translator.html">Translator </a></li>
+                <li><a href="dictionary.html">Dictionary</a> </li>
+                <li><a href="blog1.html"> Blogging Content </a></li>
+            </ul>
+        </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dict-img">
+                    <img src="Images/w.jpg" alt="">
+                    <div class="dict-content">
+                        <h2>Search Your Word's Definition Here</h2>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            <button class="btn btn-info" id="btn">Click</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Definition</h2>
+                <p id="para" class="dict-para"></p>
+            </div>
+        </div>
+    </div>
+    <script src="dictionery.js"></script>
+    <script src="js files/script.js"></script>
+</body>
+</html>
